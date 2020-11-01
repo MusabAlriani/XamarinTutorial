@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+             NavigationPage.HasNavigationBar="False"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+               xmlns:accordion="clr-namespace:Syncfusion.XForms.Accordion;assembly=Syncfusion.Expander.XForms"
+             xmlns:local1="clr-namespace:eServiceApp.MarKUpExtensions"
+             mc:Ignorable="d"
+             x:Class="eServiceApp.AccordionGridPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.8*"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0" >
+
+            <Image x:Name="image"  Margin="5,0,5,0" VerticalOptions="Start"
+                       Source="{local1:EmbededImage eServiceApp.imgs.logo.jpg}">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer  Tapped="OnTapGestureRecognizerTapped"  />
+                </Image.GestureRecognizers>
+            </Image>
+            <!--<Label  Text="Welcome to Xamarin.Forms!" 
+                    TextColor="" FontSize="32"
+                    HorizontalOptions="Center" VerticalOptions="Center" />
+            <Label Text="Cross-Platform apps made easey"
+                   TextColor="" FontSize="24"
+                    HorizontalOptions="Center" VerticalOptions="Center"/>-->
+
+
+        </StackLayout >
+
+        <!--ExpandMode="SingleOrNone" AutoScrollPosition="MakeVisible"-->
+
+        <StackLayout Grid.Row="2">
+            <accordion:SfAccordion x:Name="accordion"  Margin="10,5,10,5" ExpandMode="SingleOrNone" >
+
+
+                <accordion:SfAccordion.Items >
+                    <accordion:AccordionItem   >
+
+                        <accordion:AccordionItem.Header  >
+
+                            <Label FontSize="24" TextColor="Black" BackgroundColor="LightSteelBlue"
+                               VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  >(SMS)أرقام الرسائل النصيةالقصيرة</Label>
+
+
+
+                        </accordion:AccordionItem.Header>
+
+                        <accordion:AccordionItem.Content>
+                            <StackLayout>
+                                <Grid Padding="10,10,10,10" >
+                                    <Label FontSize="22" BackgroundColor="White" TextColor="Black" 
+                                               HorizontalTextAlignment="Center"
+                                                VerticalOptions="Center" 
+                                               HorizontalOptions="Center">هي أرقام تٌستخدم لإرسال رسائل نصية قصيرة لخدمات القيمة المضافة تُرسل من خلال الهاتف المحمول، وتتكون من 5 خانات.</Label>
+                                </Grid>
+                                <Button Text="استعلام عن الرقم" TextColor="White"
+                                CornerRadius="5" Clicked="Button_Clicked_SMS"
+                                BackgroundColor="SteelBlue"/>
+                            </StackLayout>
+                        </accordion:AccordionItem.Content>
+                    </accordion:AccordionItem>
+
+                    <accordion:AccordionItem>
+                        <accordion:AccordionItem.Header>
+
+                            <Label FontSize="24" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightSteelBlue"
+                               TextColor="Black" >الأرقام القصيرةالمجانية(14xx)</Label>
+
+
+                        </accordion:AccordionItem.Header>
+
+                        <accordion:AccordionItem.Content>
+                            <StackLayout>
+
+                                <Grid Padding="10,10,10,10">
+                                    <Label FontSize="22" BackgroundColor="White" TextColor="Black" HorizontalTextAlignment="Center"
+                                                VerticalOptions="Center" 
+                                               HorizontalOptions="Center" >هي أرقام قصيرة سهلة الحِفظ، يتم اختيارها للنفاذ إلى خدمات مختلفة تمس كافة شرائح المجتمع، وفيها الطرف المُتصل به هو من يتحمّل رسوم المكالمة. وتستخدم من خلال شبكات الهاتف الثابت والمحمول، وتتكون من 4 خانات بادئُها 14.</Label>
+                                </Grid>
+                                <Button Text="استعلام عن الرقم" TextColor="White"
+                                CornerRadius="5"  Clicked="Button_Clicked_Number14"
+                                BackgroundColor="SteelBlue"/>
+                            </StackLayout>
+
+                        </accordion:AccordionItem.Content>
+                    </accordion:AccordionItem>
+
+                    <accordion:AccordionItem>
+                        <accordion:AccordionItem.Header>
+
+                            <Label FontSize="24" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="LightSteelBlue"
+                               TextColor="Black" >الأرقام القصيرة غير مجانية(15xx)</Label>
+
+
+                        </accordion:AccordionItem.Header>
+                        <accordion:AccordionItem.Content>
+                            <StackLayout>
+                                <Grid Padding="10,10,10,10">
+                                    <Label FontSize="22" BackgroundColor="White" TextColor="Black" >هي أرقام قصيرة سهلة الحِفظ، يتم اختيارها للنفاذ إلى خدمات مختلفة تمس كافة شرائح المجتمع، وفيها الطرف المُتصل هو من يتحمّل رسوم المكالمة. وتستخدم من خلال شبكات الهاتف الثابت والمحمول، وتتكون من 4 خانات بادئُها 15.</Label>
+                                </Grid>
+                                <Button Text="استعلام عن الرقم" TextColor="White"
+                                CornerRadius="5" Clicked="Button_Clicked_Number15"
+                                BackgroundColor="SteelBlue"/>
+                            </StackLayout>
+                        </accordion:AccordionItem.Content>
+                    </accordion:AccordionItem>
+                    <accordion:AccordionItem>
+                        <accordion:AccordionItem.Header>
+
+                            <Label FontSize="24" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" 
+                           TextColor="Black" BackgroundColor="LightSteelBlue" >(0800-xxx xxx)الأرقام المجانية</Label>
+
+
+                        </accordion:AccordionItem.Header>
+                        <accordion:AccordionItem.Content>
+                            <StackLayout>
+                                <Grid Padding="10,10,10,10">
+                                    <Label FontSize="22" BackgroundColor="white" TextColor="Black" >هي أرقام خدمات تُفرض فيها رسوم المكالمة على الطرف المُتصل به، وتستخدم من خلال شبكات الهاتف الثابت والمحمول، وتتكون من عشر خانات.</Label>
+                                </Grid>
+                                <Button Text="استعلام عن الرقم" TextColor="White"
+                                CornerRadius="5" Clicked="Button_Clicked_Number0800"
+                                BackgroundColor="SteelBlue"/>
+                            </StackLayout>
+                        </accordion:AccordionItem.Content>
+                    </accordion:AccordionItem>
+                    <accordion:AccordionItem BackgroundColor="LightSteelBlue">
+                        <accordion:AccordionItem.Header>
+
+                            <Label FontSize="24" TextColor="Black" BackgroundColor="LightSteelBlue"
+                           VerticalTextAlignment="Center" HorizontalTextAlignment="Center">(0900-yxx xxx)الأرقام المميزة</Label>
+
+
+                        </accordion:AccordionItem.Header>
+                        <accordion:AccordionItem.Content>
+                            <StackLayout>
+                                <Grid Padding="10,10,10,10">
+                                    <Label FontSize="22"   TextColor="Black" >هي أرقام خدمات تُفرض فيها رسوم المكالمة على الطرف المُتصل، وتستخدم من خلال شبكات الهاتف الثابت والمحمول، وتتكون من عشر خانات.</Label>
+                                </Grid>
+                                <Button Text="استعلام عن الرقم" TextColor="White"
+                                CornerRadius="5" Clicked="Button_Clicked_Number0900"
+                                BackgroundColor="SteelBlue"/>
+                            </StackLayout>
+                        </accordion:AccordionItem.Content>
+                    </accordion:AccordionItem>
+
+
+                </accordion:SfAccordion.Items>
+
+            </accordion:SfAccordion>
+        </StackLayout>
+        <StackLayout Grid.Row="4" Spacing="2" >
+            <!--<Button  TextColor="White" Margin="15 ,2,15,0" BorderRadius="15" FontSize="14"
+                  VerticalOptions="Center" Text="Login" BackgroundColor="LightSteelBlue"
+                HorizontalOptions="FillAndExpand"/>
+            <Button Text="Register" TextColor="White" Margin="15 ,5,15,0" BorderRadius="15"
+                  VerticalOptions="Center" FontSize="14" BackgroundColor="LightSteelBlue"
+                HorizontalOptions="FillAndExpand"/>-->
+            <Button Text=" الرجوع للصفحةالرئيسية " 
+                            TextColor="White"
+                            BackgroundColor="#337ab7" 
+                            Clicked="Button_Clicked"/>
+
+        </StackLayout>
+
+    </Grid>
+
+</ContentPage>

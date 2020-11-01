@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:AnimationPage
+    xmlns:controls="clr-namespace:FormsControls.Base;assembly=FormsControls.Base" NavigationPage.HasNavigationBar="False"
+            xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms"
+             xmlns:genriccollection="clr-namespace:System.Collections.Generic;assembly=netstandard"
+             xmlns:dataGrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+             xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=netstandard"
+              xmlns:local="clr-namespace:eServiceApp.Models"
+    xmlns:local1="clr-namespace:eServiceApp.MarKUpExtensions"
+    x:Class="eServiceApp.AutoCompletePage">
+
+    <controls:AnimationPage.PageAnimation>
+        <controls:SlidePageAnimation Duration="Medium" Subtype="FromLeft" />
+    </controls:AnimationPage.PageAnimation>
+
+    <ContentPage.BindingContext>
+        <local:DeviceViewModel x:Name="localSearch"/>
+    </ContentPage.BindingContext>
+    <AbsoluteLayout>
+        <StackLayout>
+            <Image x:Name="image"  Margin="5,0,5,0"
+                       Source="{local1:EmbededImage eServiceApp.imgs.logo.jpg}">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer  Tapped="OnTapGestureRecognizerTapped"  />
+                </Image.GestureRecognizers>
+
+            </Image>
+
+           
+
+<StackLayout 
+        VerticalOptions="Start" 
+        HorizontalOptions="Start"
+        Margin="10,0,10,0" >
+
+                <Label Margin="0,3,0,3" Text="الاستعلام عن الاجهزة المعتمدة" FontSize="22" 
+               TextColor="#337ab7" 
+               VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+                <autocomplete:SfAutoComplete x:Name="autocomplete"  ValueChanged="autocomplete_ValueChanged"
+                                          Margin="2,0,20,0"   HeightRequest="60" WidthRequest="350" SuggestionMode="StartsWith"  />
+        <dataGrid:SfDataGrid x:Name="dataGrid"  Margin="2,0,20,0" 
+                             ItemsSource="{Binding deviceForApprovalsObservable}" DefaultColumnWidth="80">
+
+        </dataGrid:SfDataGrid>
+        
+        
+        
+       
+    </StackLayout>
+        </StackLayout>
+        <Button Text=" الرجوع للصفحةالسابقة " 
+                            TextColor="White" AbsoluteLayout.LayoutBounds="0,1,1,50"
+                            BackgroundColor="#337ab7" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" 
+                            Clicked="Button_Clicked"/>
+    </AbsoluteLayout>
+
+</controls:AnimationPage>

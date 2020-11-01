@@ -1,0 +1,82 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Files\Equipment2.xls" />
+    <None Remove="Files\Number.xlsx" />
+    <None Remove="imgs\1234 .jpg" />
+    <None Remove="imgs\addService.jpg" />
+    <None Remove="imgs\addService.png" />
+    <None Remove="imgs\logo.jpg" />
+    <None Remove="imgs\logo.png" />
+    <None Remove="imgs\typeApprovel.jpg" />
+    <None Remove="imgs\typeApprovel.png" />
+    <None Remove="imgs\xamarinlogo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Files\Equipment2.xls" />
+    <EmbeddedResource Include="Files\Number.xlsx" />
+    <EmbeddedResource Include="imgs\addService.png" />
+    <EmbeddedResource Include="imgs\logo.jpg" />
+    <EmbeddedResource Include="imgs\logo.png" />
+    <EmbeddedResource Include="imgs\typeApprovel.jpg" />
+    <EmbeddedResource Include="imgs\typeApprovel.png" />
+    <EmbeddedResource Include="imgs\xamarinlogo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Rg.Plugins.Popup" Version="1.2.0.223" />
+    <PackageReference Include="Syncfusion.Xamarin.Expander" Version="17.3.0.14" />
+    <PackageReference Include="Syncfusion.Xamarin.SfAutoComplete" Version="17.3.0.14" />
+    <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="17.1.0.38" />
+    <PackageReference Include="Syncfusion.Xamarin.SfDataGrid" Version="17.3.0.14" />
+    <PackageReference Include="Syncfusion.Xamarin.XlsIO" Version="17.3.0.14" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Xamarin.Forms.AnimationNavigation" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="imgs\addService.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="AccordionGridPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AccordionPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AutoCompletePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Number0800Page.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Number0900Page.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Number14XXPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Number15XXPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="PopUpView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SMSNumbersPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="WelcomPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

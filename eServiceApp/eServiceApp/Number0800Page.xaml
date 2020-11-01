@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:AnimationPage
+    xmlns:controls="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
+    NavigationPage.HasNavigationBar="False"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+    xmlns:local="clr-namespace:eServiceApp.MarKUpExtensions"
+             x:Class="eServiceApp.Number0800Page">
+
+    <controls:AnimationPage.PageAnimation>
+        <controls:RotatePageAnimation Duration="Medium" Subtype="FromLeft" />
+    </controls:AnimationPage.PageAnimation>
+
+    <StackLayout BackgroundColor="White">
+
+        <Image x:Name="image1"   Margin="5,0,5,0"
+                       Source="{local:EmbededImage eServiceApp.imgs.logo.jpg}">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer  Tapped="OnTapGestureRecognizerTapped"  />
+            </Image.GestureRecognizers>
+
+        </Image>
+
+        <ActivityIndicator Color="Blue" IsRunning="{Binding Source={x:Reference image1},Path=IsLoading}"/>
+
+        <StackLayout Margin="40,5,40,40" x:Name="stackLay2" >
+
+               <Label Margin="0,20,0,20" 
+               Text="(0800-xxx xxx) الاستعلام عن الأرقام" FontSize="22" FontAttributes="Bold"
+               TextColor="#337ab7" 
+               VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+                <SearchBar Keyboard="Numeric" x:Name="searchBx"
+                     MaxLength="6"  SearchButtonPressed="SearchBar_SearchButtonPressed"
+                     Placeholder=" ادخل الخانات السته المطلوبة (xxx xxx) " >
+                    </SearchBar>
+
+                <ListView x:Name="list">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell  >
+
+                            </TextCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <WebView x:Name="webView"  WidthRequest="800"  HeightRequest="300"  ></WebView>
+                </StackLayout>
+            
+            <Button Text=" الرجوع للصفحةالسابقة " 
+                    AbsoluteLayout.LayoutBounds="0,1,1,50"
+                AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+                            TextColor="White" 
+                            BackgroundColor="#337ab7"
+                            Clicked="Button_Clicked"/>
+
+
+        </StackLayout>
+    
+</controls:AnimationPage>

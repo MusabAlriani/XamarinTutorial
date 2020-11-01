@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:AnimationPage
+    xmlns:controls="clr-namespace:FormsControls.Base;assembly=FormsControls.Base" NavigationPage.HasNavigationBar="False"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+           
+    xmlns:local="clr-namespace:eServiceApp.MarKUpExtensions"
+    x:Class="eServiceApp.WelcomPage">
+
+    <controls:AnimationPage.PageAnimation>
+        <controls:RotatePageAnimation Duration="Medium" Subtype="FromLeft" />
+    </controls:AnimationPage.PageAnimation>
+
+    <StackLayout Spacing="2">
+        <Image x:Name="image"  Margin="5,0,5,20"
+             Source="{local:EmbededImage eServiceApp.imgs.logo.png}" />
+        
+        <Label Text="خدمات الإدارة العامة لشؤون التنظيم" Margin="0,0,0,70"
+                TextColor="Black" FontAttributes="Bold"
+                 FontSize="30"  HorizontalOptions="Center" />
+        <!--<Image Margin="5 ,0,5,40"  x:Name="imgLocal"/>-->
+
+
+
+
+        <Image x:Name="image1"  Margin="0,0,0,20"
+                       Source="{local:EmbededImage eServiceApp.imgs.addService.png}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer  Tapped="OnTapGestureRecognizerTapped"  />
+                    </Image.GestureRecognizers>
+                    
+                </Image>
+
+        <Label Text="الاستعلام عن أرقام الخدمات المضافة" Margin="0,0,0,70"
+                VerticalOptions="Center" TextColor="SteelBlue" FontAttributes="Bold"
+                HorizontalOptions="Center" FontSize="22" />
+
+        <Image x:Name="image2"  Margin="0,0,0,20"
+                       Source="{local:EmbededImage eServiceApp.imgs.typeApprovel.png}">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer  Tapped="OnTapGestureRecognizerTapped2"  />
+            </Image.GestureRecognizers>
+
+        </Image>
+        <!--<ImageButton x:Name="image2"   Margin="0,0,20,0" 
+                    Source="{local:EmbededImage eServiceApp.imgs.typeApprovel.png}"
+                   
+                    Clicked="ImageButton_Clicked_1" />-->
+                
+                <Label Text="الاستعلام عن الأجهزة والمعدات المعتمدة نوعياَ"
+                VerticalOptions="Center" TextColor="SteelBlue" FontAttributes="Bold"
+                HorizontalOptions="Center" FontSize="22" />
+            </StackLayout>
+       
+   
+</controls:AnimationPage>
