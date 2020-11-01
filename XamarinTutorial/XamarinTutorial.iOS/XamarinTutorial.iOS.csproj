@@ -130,10 +130,4 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\XamarinTutorial\XamarinTutorial.csproj">
-      <Project>{491E5C1A-4DA9-4612-9E5A-6015A67E4DD9}</Project>
-      <Name>XamarinTutorial</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>
